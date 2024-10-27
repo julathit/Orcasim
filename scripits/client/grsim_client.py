@@ -1,3 +1,9 @@
+import sys
+import os
+
+sys.path.append(os.path.dirname(os.path.abspath("client/sendClient")))
+
+
 import socket
 import time
 import sendClient.grSim_Commands_pb2 as commands  # Adjust this import to your file structure
