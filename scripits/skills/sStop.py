@@ -1,4 +1,4 @@
-from . import sKillNode
+from . import S_sKillNode
 
 def execute(pub,robotIndex):
-    sKillNode.sendCommand(pub,robotIndex,0,0,0,False)
+    S_sKillNode.sendCommand(pub,robotIndex,0,0,0,False)

@@ -104,14 +104,13 @@ class Connection:
         # Send the packet
         try:
             self.sock.sendto(data, (self.ip, self.port))
-            print(f"Sent command: {robot_command}")
         except Exception as e:
             print(f"Error sending data: {e}")
 
 # Example usage
 if __name__ == "__main__":
     conn = Connection()
-    conn.set_id(1)  # Set robot ID
+    conn.set_id(0)  # Set robot ID
     conn.set_time(0)  # Set timestamp
     conn.set_wheel1(0)  # Set wheel speeds
     conn.set_wheel2(0)
@@ -119,11 +118,10 @@ if __name__ == "__main__":
     conn.set_wheel4(0)
     conn.set_kickspeed_x(0.0)  # Set kick speeds
     conn.set_kickspeed_z(0.0)
-    conn.set_vel_x(20)  # Set velocities
+    conn.set_vel_x(0)  # Set velocities
     conn.set_vel_y(0.0)
-    conn.set_vel_z(0.0)
+    conn.set_vel_z(10)
     conn.set_team_yellow(False)  # Set team color
 
     while True:
         conn.send()  # Send commands continuously
-        time.sleep(0.01)  # Send commands every 100 ms

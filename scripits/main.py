@@ -1,5 +1,4 @@
 from skills import sMoveToPoint, sMoveToBall
-from sequence import seNormalMove
 
 if __name__ == "__main__":
 
